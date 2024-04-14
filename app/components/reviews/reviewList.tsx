@@ -3,9 +3,9 @@
 // или же  должен был монтировать html сохранив разметку, но если нужен был второй вариант, то мне нужно было дополнительно парсить текст
 // и скорей всего использовать тэмплейты, если бы полученный текст был бы более осмысленным или хотя бы lorum ipsum, было бы понятней
 import Review from "./review";
-import { getReviews } from "../https/dataFetch";
+import { useReviews } from "../https/dataFetch";
 const ReviewList = () => {
-  const reviews = getReviews();
+  const reviews = useReviews();
   console.log(reviews);
   if (reviews !== undefined && reviews.length > 0) {
     return (

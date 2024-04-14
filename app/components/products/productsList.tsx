@@ -1,9 +1,8 @@
 "use client";
-import fetchReviewsAndProducts from "../https/dataFetchOld";
 import ProductCard from "./productCard";
-import { getProducts } from "../https/dataFetch";
+import { useProducts } from "../https/dataFetch";
 const ProductsList = () => {
-  const products = getProducts();
+  const products = useProducts();
   console.log(products);
   if (products !== undefined && products.length > 0) {
     return (

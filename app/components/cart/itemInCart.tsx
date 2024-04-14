@@ -13,17 +13,17 @@ export const ProductInCart: React.FC<{
       className=" flex h-10  w-full border-b-2 border-t-0 border-text p-2 pt-3 text-text "
     >
       <div className="flex w-full ">
-        <div className="  flex max-w-[200px] min-w-[200px] flex-col max-[1300px]:w-full max-md:min-w-[150px]  ">
+        <div className="  flex max-w-[200px] min-w-[200px] flex-col max-[1300px]:w-full max-md:min-w-[150px] max-md:w-1/2  ">
           <h1 className=" flex w-1/3 overflow-hidden whitespace-nowrap shrink-0 ">
             {product.title}
           </h1>
         </div>
-        <div className="quantity  flex max-h-6 w-[80%] items-center justify-center">
-          <p className="flex px-10  min-w-[80px] max-[1300px]:py-1 max-[1300px]:pl-0">
+        <div className="quantity  flex max-h-6 w-[80%] items-center justify-center max-[1300px]:w-1/5">
+          <p className="flex px-10  min-w-[80px] max-[1300px]:py-1 max-[1300px]:pl-0 max-[1300px]:px-5">
             x {product.quantityInCart}
           </p>
         </div>
-        <div className="flex w-1/5 min-w-[230px] ">
+        <div className="flex w-1/5 min-w-[230px] max-[1300px]:min-w-0 ">
           <p className="flex px-10 max-[1300px]:py-1 max-[1300px]:pl-0">
             {totalPrice}₽
           </p>

@@ -6,7 +6,7 @@ import { useAppDispatch } from "@/app/lib/hooks";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
-export const getReviews = () => {
+export const useReviews = () => {
   const dispatch = useAppDispatch();
   async function fetchReviews() {
     try {
@@ -22,7 +22,6 @@ export const getReviews = () => {
   }
   useEffect(() => {
     fetchReviews();
-    console.log("i fire once");
   }, []);
   const { reviews } = useSelector(selectReviews);
   if (reviews.length > 0) {
@@ -30,7 +29,8 @@ export const getReviews = () => {
   }
 };
 
-export const getProducts = () => {
+export const useProducts = () => {
+  //я не успел реализовать инфинит скрол, но в принципе реализовывал его до этого в других проектах через танстак квери и сторонние библиотеки
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const dispatch = useAppDispatch();
@@ -51,7 +51,6 @@ export const getProducts = () => {
   useEffect(() => {
     setIsLoading(true);
     fetchProducts();
-    console.log("i fire once");
   }, []);
 
   const { products } = useSelector(selectProducts);
