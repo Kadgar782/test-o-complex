@@ -24,10 +24,26 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    /* Я не нашел откуда при сборке появляется overflow: hidden, так что придется сделать так */
+    overflow: auto !important;
+    padding-right: 0px !important;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  
+}
+/* Hides the arrows in the input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
